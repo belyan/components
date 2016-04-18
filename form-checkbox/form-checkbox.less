@@ -1,0 +1,43 @@
+/* Form Checkbox */
+.form-checkbox {
+    display: inline-flex;
+    align-items: flex-start;
+    cursor: pointer;
+
+    &__input {
+        position: absolute;
+        left: -9999px;
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        width: 16px;
+        height: 16px;
+        margin: 1px;
+        background-color: white;
+        border: 1px solid lightgray;
+        border-radius: 2px;
+        box-sizing: border-box;
+    }
+
+    &__input:checked + &__icon {
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 1px;
+            bottom: 1px;
+            width: 16px;
+            height: 16px;
+            background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAsElEQVQ4T6WTURGDMBBEHw4qAQdFQlGCBhzVQSUUCZUADsABs5nezDXkGCj5ycdl3+1tkoqLq7qo5x/ADXgBPfA5C5D4DTTADLRnAF5sk09HASXxAjwM8DNXFmwotgw2c6nwheyKdUYOnkDnuqZwgNEFZuVk2zVIAHUZgHsGEUBph2JzoL0E8VFsOlvR30IECcXegQFzyK64BPDj1HlgpX8TPSQ5EcCuM/xzR19iCFgBFocqUdbMujcAAAAASUVORK5CYII=") no-repeat;
+        }
+    }
+
+    &__label {
+        padding-left: 6px;
+        font-family: sans-serif;
+        font-size: 15px;
+        line-height: 18px;
+    }
+}

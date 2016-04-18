@@ -1,0 +1,24 @@
+{
+  "name": "components",
+  "version": "0.0.1",
+  "description": "Library of UI Components",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/belyan/components.git"
+  },
+  "author": "Yuri Belyakov <belyan@mail.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/belyan/components/issues"
+  },
+  "homepage": "https://github.com/belyan/components",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.0.5",
+    "normalize.css": "^3.0.3"
+  }
+}
