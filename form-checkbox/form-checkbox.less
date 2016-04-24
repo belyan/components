@@ -40,8 +40,7 @@
             bottom: 1px;
             width: 0;
             height: 0;
-            opacity: 0;
-            transition: width 200ms ease-out, opacity 100ms ease-in;
+            transition: width 200ms ease-out;
         }
     }
 
@@ -57,7 +56,6 @@
         &:before {
             width: @icon-size;
             height: @icon-size;
-            opacity: 1;
             background: data-uri(@icon-image) no-repeat;
         }
     }
