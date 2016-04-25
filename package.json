@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/belyan/components",
   "devDependencies": {
+    "github-markdown-css": "^2.2.1",
     "gulp": "^3.9.1",
     "gulp-less": "^3.0.5",
     "normalize.css": "^3.0.3"
