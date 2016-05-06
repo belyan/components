@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Text</title>
+    <link rel="stylesheet" href="../common/styles/styles.css"/>
+</head>
+<body>
+
+<main class="main">
+    <article class="markdown-body">
+        <h1>Form Text</h1>
+        <div class="form-text">
+            <input type="text" class="form-text__input"/>
+        </div>
+
+        <h3>With placeholder</h3>
+        <div class="form-text">
+            <input type="text" class="form-text__input" placeholder="Lorem"/>
+        </div>
+
+        <h3>With value</h3>
+        <div class="form-text">
+            <input type="text" class="form-text__input" placeholder="Lorem" value="Lorem ipsum dolor"/>
+        </div>
+
+        <h3>Disabled</h3>
+        <div class="form-text">
+            <input type="text" class="form-text__input" disabled/>
+        </div>
+        <div class="form-text">
+            <input type="text" class="form-text__input" placeholder="Lorem" value="Lorem ipsum dolor" disabled/>
+        </div>
+
+        <h3>With label</h3>
+        <div class="form-text">
+            <label for="with_label" class="form-text__label">Lorem ipsum dolor sit amet.</label>
+            <input type="text" id="with_label" class="form-text__input"/>
+        </div>
+        <div class="form-text">
+            <label for="with_long_label" class="form-text__label">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium ad amet animi assumenda beatae cumque ducimus ea, eveniet explicabo impedit ipsam ipsum, mollitia neque nostrum, odio quod vel veniam.</label>
+            <input type="text" id="with_long_label" class="form-text__input"/>
+        </div>
+
+        <h3>With label inline</h3>
+        <div class="form-text form-text_inline">
+            <label for="with_label_inline" class="form-text__label">Lorem ipsum dolor sit amet.</label>
+            <input type="text" id="with_label_inline" class="form-text__input"/>
+        </div>
+        <div class="form-text form-text_inline">
+            <label for="with_long_label_inline" class="form-text__label">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, repellat.</label>
+            <input type="text" id="with_long_label_inline" class="form-text__input"/>
+        </div>
+
+        <h3>Required</h3>
+        <div class="form-text form-text_required">
+            <label for="required" class="form-text__label">Lorem ipsum dolor sit amet.</label>
+            <input type="text" id="required" class="form-text__input"/>
+        </div>
+
+        <h3>Various width</h3>
+        <div class="form-text form-text_width_m">
+            <input type="text" class="form-text__input"/>
+        </div>
+        <div class="form-text form-text_width_s">
+            <input type="text" class="form-text__input"/>
+        </div>
+    </article>
+</main>
+
+</body>
+</html>

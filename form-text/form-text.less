@@ -1,0 +1,104 @@
+/* Form Text */
+.form-text {
+    // Input params
+    @input-height: 30px;
+    @input-color: black;
+    @input-placeholder-color: gray;
+    @input-bg-color: white;
+    @input-border-color: lightgray;
+    @input-border-color-focus: dodgerblue;
+    @input-padding: 6px;
+    @input-width-m: 50%;
+    @input-width-s: 25%;
+    @input-font-size: 15px;
+
+    // Label params
+    @label-font-size: 15px;
+    @label-line-height: 18px;
+    @label-padding-bottom: 4px;
+
+    &_inline {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    & + & {
+        margin-top: @input-height / 2;
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        height: @input-height;
+        box-sizing: border-box;
+        padding: 0 @input-padding;
+
+        outline: none;
+        color: @input-color;
+        background-color: @input-bg-color;
+        border: 1px solid @input-border-color;
+        border-radius: 3px;
+
+        transition: border-color 200ms linear;
+
+        &[type="text"] {
+            font-size: @input-font-size;
+        }
+
+        &:disabled {
+            background-color: fade(@input-border-color, 20%);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        &:enabled:hover {
+            box-shadow: 0 0 3px fade(@input-border-color, 50%);
+        }
+
+        &:enabled:focus {
+            border-color: @input-border-color-focus;
+            box-shadow: 0 0 3px fade(@input-border-color-focus, 50%);
+        }
+
+        // TODO: Set placeholder color
+    }
+
+    &_inline &__input {
+        width: 60%;
+    }
+
+    &_width_m &__input {
+        width: @input-width-m;
+    }
+
+    &_width_s &__input {
+        width: @input-width-s;
+    }
+
+    &__label {
+        display: block;
+        padding-bottom: @label-padding-bottom;
+
+        font-size: @label-font-size;
+        line-height: @label-line-height;
+    }
+
+    &_inline &__label {
+        width: 40%;
+        margin-top: (@input-height - @label-line-height) / 2;
+        padding-bottom: 0;
+        padding-right: 12px;
+    }
+
+    &_required &__label {
+        &:after {
+            content: "*";
+            display: inline;
+            vertical-align: text-top;
+            padding-left: 2px;
+
+            color: @input-border-color-focus;
+            font-size: @label-font-size * 1.5;
+        }
+    }
+}
