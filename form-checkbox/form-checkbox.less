@@ -6,6 +6,8 @@
     @icon-color: dodgerblue; // set this color in SVG file
     @icon-bg-color: white;
     @icon-border-color: lightgray;
+    @icon-border-color-hover: darkgray;
+    @icon-border-color-focus: darkgray;
 
     // Label params
     @label-font-size: 15px;
@@ -25,13 +27,18 @@
     &__icon {
         position: relative;
         flex-shrink: 0;
+
+        display: inline-block;
         width: @icon-size;
         height: @icon-size;
         margin: (@label-line-height - @icon-size) / 2;
+
         background-color: @icon-bg-color;
         border: 1px solid @icon-border-color;
         border-radius: 3px;
         box-sizing: border-box;
+
+        transition: border-color 200ms linear;
 
         &:before {
             content: "";
@@ -44,12 +51,13 @@
         }
     }
 
-    &__input:enabled:hover + &__icon {
-        border-color: fade(@icon-color, 50%);
+    &:hover &__input:enabled + &__icon {
+        border-color: @icon-border-color-hover;
     }
 
     &__input:enabled:focus + &__icon {
-        box-shadow: 0 0 3px @icon-border-color;
+        border-color: @icon-border-color-focus;
+        box-shadow: 0 0 3px fade(@icon-border-color-focus, 50%);
     }
 
     &__input:checked + &__icon {

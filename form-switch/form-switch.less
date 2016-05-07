@@ -28,9 +28,12 @@
     &__icon {
         position: relative;
         flex-shrink: 0;
+
+        display: inline-block;
         width: @icon-width;
         height: @icon-height;
         margin: (@label-line-height - @icon-height) / 2;
+
         background-color: @icon-bg-color;
         border-radius: @icon-width / 2;
         box-sizing: border-box;
@@ -47,20 +50,22 @@
             border-radius: 50%;
             box-shadow: 0 1px 3px @icon-bg-color;
             background-color: @switch-color;
-            transition: left 200ms ease;
+
+            transition: left 200ms ease, box-shadow 200ms linear;
         }
     }
 
-    &__input:enabled:hover + &__icon:before {
+    &:hover &__input:enabled + &__icon:before,
+    &__input:enabled:focus + &__icon:before {
         box-shadow: 0 0 0 1px @switch-color;
     }
 
     &__input:enabled:focus + &__icon {
-        box-shadow: 0 0 3px @icon-bg-color;
+        box-shadow: 0 0 3px fade(@icon-bg-color, 50%);
     }
 
     &__input:enabled:focus:checked + &__icon {
-        box-shadow: 0 0 3px @icon-color;
+        box-shadow: 0 0 3px fade(@icon-color, 50%);
     }
 
     &__input:checked + &__icon {
