@@ -1,18 +1,42 @@
 /* Form Checkbox */
 .form-checkbox {
+    // Group params
+    @group-margin-top: 9px;
+    @group-margin-left: 18px;
+
     // Icon params
     @icon-size: 16px;
     @icon-image: "../../form-checkbox/checkmark.svg"; // relative path from CSS file
     @icon-color: dodgerblue; // set this color in SVG file
     @icon-bg-color: white;
+    @icon-border-radius: 3px;
     @icon-border-color: lightgray;
-    @icon-border-color-hover: darkgray;
-    @icon-border-color-focus: darkgray;
+    @icon-border-color-hover: dodgerblue;
+    @icon-border-color-focus: dodgerblue;
 
     // Label params
     @label-font-size: 15px;
     @label-line-height: 18px;
     @label-padding: 6px;
+
+    &-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &_inline {
+            flex-direction: row;
+        }
+    }
+
+    &-group & + & {
+        margin-top: @group-margin-top;
+    }
+
+    &-group_inline & + & {
+        margin-top: 0;
+        margin-left: @group-margin-left;
+    }
 
     display: inline-flex;
     align-items: flex-start;
@@ -35,7 +59,7 @@
 
         background-color: @icon-bg-color;
         border: 1px solid @icon-border-color;
-        border-radius: 3px;
+        border-radius: @icon-border-radius;
         box-sizing: border-box;
 
         transition: border-color 200ms linear;

@@ -10,52 +10,81 @@
 <main class="main">
 <article class="markdown-body">
 
-<h1>Form Checkbox</h1>
+    <h1>Form Checkbox</h1>
 
-<label class="form-checkbox">
-    <input class="form-checkbox__input" type="checkbox"/>
-    <i class="form-checkbox__icon"></i>
-    <span class="form-checkbox__label">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, repellat.</span>
-</label>
+    <label class="form-checkbox">
+        <input class="form-checkbox__input" type="checkbox"/>
+        <i class="form-checkbox__icon"></i>
+        <span class="form-checkbox__label">Lorem ipsum dolor sit amet.</span>
+    </label>
 
-<h3>Checked</h3>
+    <h3>Checked</h3>
 
-<label class="form-checkbox">
-    <input class="form-checkbox__input" type="checkbox" checked/>
-    <i class="form-checkbox__icon"></i>
-    <span class="form-checkbox__label">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, repellat.</span>
-</label>
+    <label class="form-checkbox">
+        <input class="form-checkbox__input" type="checkbox" checked/>
+        <i class="form-checkbox__icon"></i>
+        <span class="form-checkbox__label">Lorem ipsum dolor sit amet.</span>
+    </label>
 
-<h3>Disabled</h3>
+    <h3>Disabled</h3>
 
-<label class="form-checkbox">
-    <input class="form-checkbox__input" type="checkbox" disabled/>
-    <i class="form-checkbox__icon"></i>
-    <span class="form-checkbox__label">Lorem ipsum dolor sit amet.</span>
-</label>
+    <div class="form-checkbox-group">
+        <label class="form-checkbox">
+            <input class="form-checkbox__input" type="checkbox" disabled/>
+            <i class="form-checkbox__icon"></i>
+            <span class="form-checkbox__label">Lorem ipsum dolor sit amet.</span>
+        </label>
+        <label class="form-checkbox">
+            <input class="form-checkbox__input" type="checkbox" checked disabled/>
+            <i class="form-checkbox__icon"></i>
+            <span class="form-checkbox__label">Lorem ipsum dolor sit amet.</span>
+        </label>
+    </div>
 
-<h3>Disabled and checked</h3>
+    <h3>Without label</h3>
 
-<label class="form-checkbox">
-    <input class="form-checkbox__input" type="checkbox" checked disabled/>
-    <i class="form-checkbox__icon"></i>
-    <span class="form-checkbox__label">Lorem ipsum dolor sit amet.</span>
-</label>
+    <label class="form-checkbox">
+        <input class="form-checkbox__input" type="checkbox"/>
+        <i class="form-checkbox__icon"></i>
+    </label>
 
-<h3>Without label</h3>
+    <h3>With long label</h3>
 
-<label class="form-checkbox">
-    <input class="form-checkbox__input" type="checkbox"/>
-    <i class="form-checkbox__icon"></i>
-</label>
+    <label class="form-checkbox">
+        <input class="form-checkbox__input" type="checkbox"/>
+        <i class="form-checkbox__icon"></i>
+        <span class="form-checkbox__label">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium ad amet animi assumenda beatae cumque ducimus ea, eveniet explicabo impedit ipsam ipsum, mollitia neque nostrum, odio quod vel veniam.</span>
+    </label>
 
-<h3>With long label</h3>
+    <h3>Group</h3>
 
-<label class="form-checkbox">
-    <input class="form-checkbox__input" type="checkbox"/>
-    <i class="form-checkbox__icon"></i>
-    <span class="form-checkbox__label">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium ad amet animi assumenda beatae cumque ducimus ea, eveniet explicabo impedit ipsam ipsum, mollitia neque nostrum, odio quod vel veniam.</span>
-</label>
+    <div class="form-checkbox-group">
+        <label class="form-checkbox">
+            <input class="form-checkbox__input" type="checkbox" checked/>
+            <i class="form-checkbox__icon"></i>
+            <span class="form-checkbox__label">Lorem ipsum dolor sit amet.</span>
+        </label>
+        <label class="form-checkbox">
+            <input class="form-checkbox__input" type="checkbox"/>
+            <i class="form-checkbox__icon"></i>
+            <span class="form-checkbox__label">Lorem ipsum dolor sit amet.</span>
+        </label>
+    </div>
+
+    <h3>Group inline</h3>
+
+    <div class="form-checkbox-group form-checkbox-group_inline">
+        <label class="form-checkbox">
+            <input class="form-checkbox__input" type="checkbox" checked/>
+            <i class="form-checkbox__icon"></i>
+            <span class="form-checkbox__label">Lorem ipsum dolor sit amet.</span>
+        </label>
+        <label class="form-checkbox">
+            <input class="form-checkbox__input" type="checkbox"/>
+            <i class="form-checkbox__icon"></i>
+            <span class="form-checkbox__label">Lorem ipsum dolor sit amet.</span>
+        </label>
+    </div>
 
 </article>
 </main>
